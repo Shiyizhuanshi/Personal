@@ -1,6 +1,6 @@
 #include "Vcounter.h"
-#include "Verilated.h"
-#include "Verilated_vcd_c.h"
+#include "verilated.h"
+#include "verilated_vcd_c.h"
 
 int main(int argc, char **argv, char **env){
     int i;
@@ -16,7 +16,7 @@ int main(int argc, char **argv, char **env){
     tfp->open ("counter.vcd");
     
     top->clk = 1;
-    top->rst = 1:
+    top->rst = 1;
     top->en = 0;
 
     for (i=0; i<300; i++){
