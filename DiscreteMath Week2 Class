@@ -32,6 +32,10 @@ def sparse_matrix_to_CSR(u, v):
 
 row = sparse_matrix_to_CSR(u, v)
 
+# row = []
+# for i in range(4):
+#     row.append(v[u[i]]). // easy solution
+
 
 def solution_is_correct(row):
     if len(row)!=4:
