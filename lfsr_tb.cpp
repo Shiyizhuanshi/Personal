@@ -23,7 +23,7 @@ int main(int argc, char **argv, char **env){
 
     top->clk = 1;
     top->rst = 0;
-    // top->en = 1;
+    top->en = 1;
 
     for (i=0; i<1000; i++){
         for (clk=0; clk<2; clk++){
@@ -48,8 +48,8 @@ int main(int argc, char **argv, char **env){
 
         //change input simuli
         // top->rst = (i<2) | (i==15);
-        // vbdSetMode(1);
-        // top->en = vbdFlag();
+        vbdSetMode(1);
+        top->en = vbdFlag();
         top->rst = (i<2);
             // either simulation finished, or 'q' is pressed
         if ((Verilated::gotFinish()) || (vbdGetkey()=='q')) 
